@@ -9,6 +9,12 @@ Mostly works so far, currently doesn't hide email addresses in gmail when a user
 
 ## To Use
 
+# Download zip
+
+Navigate (here)[https://github.com/OscarG-png/email-hider/releases] and test the latest release.
+
+# Build it yourself
+
 - clone this repo
 - cd into directory
 - run the following in your terminal `npm run build`
