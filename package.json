@@ -4,7 +4,11 @@
   "main": "dist/content.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+    "build": "tsc && npm run copy-files",
+    "copy-files": "npm run copy-manifest && npm run copy-html && npm run copy-image",
+    "copy-manifest": "cp manifest.json dist/manifest.json",
+    "copy-html": "cp popup.html dist/popup.html",
+    "copy-image": "mkdir -p dist/images &&cp images/eye-off.png dist/images/eye-off.png"
   },
   "keywords": [],
   "author": "",
