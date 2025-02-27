@@ -7,10 +7,25 @@
         width: 200px;
         padding: 10px;
       }
+      #emailList {
+        margin-top: 10px;
+      }
     </style>
   </head>
   <body>
     <h1>Email Hider</h1>
     <p>Email hiding is active.</p>
+
+    <div>
+      <label for="emailInput">Enter Email to be Filtered</label>
+      <input type="email" id="emailInput" />
+      <button id="addEmailButton">Add</button>
+    </div>
+
+    <div>
+      <label for="emailList">Filtered Emails</label>
+      <ul id="emailList"></ul>
+    </div>
+    <script src="popup.js"></script>
   </body>
 </html>

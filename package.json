@@ -5,10 +5,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc && npm run copy-files",
-    "copy-files": "npm run copy-manifest && npm run copy-html && npm run copy-image",
+    "copy-files": "npm run copy-manifest && npm run copy-html && npm run copy-image && npm run copy-js",
     "copy-manifest": "cp manifest.json dist/manifest.json",
     "copy-html": "cp popup.html dist/popup.html",
-    "copy-image": "mkdir -p dist/images &&cp images/eye-off.png dist/images/eye-off.png"
+    "copy-image": "mkdir -p dist/images &&cp images/eye-off.png dist/images/eye-off.png",
+    "copy-js": "cp popup.js dist/popup.js"
   },
   "keywords": [],
   "author": "",
