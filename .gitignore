@@ -1,0 +1,22 @@
+# Node modules (if you're using npm)
+node_modules/
+
+# Build artifacts
+/dist/
+/build/
+
+# Temporary files
+*.log
+*.bak
+*.swp
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.idea/
+.vscode/
+
+# Chrome extension specific
+*.crx
