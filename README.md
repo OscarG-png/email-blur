@@ -12,13 +12,19 @@ Currently doesn't work in some parts of gmail. Doesn't work If you click on your
 
 # Download zip
 
-Navigate (here)[https://github.com/OscarG-png/email-hider/releases] and test the latest release.
+- Download (here)[https://github.com/OscarG-png/email-hider/releases] and test the latest release.
+- unzip folder
+- go to (chrome://extensions/)[chrome://extensions/]
+- enable developer mod
+- click on "Load unpacked"
+- navigate to the folder you unzipped.
 
 # Build it yourself
 
 - clone this repo
 - cd into directory
 - run the following in your terminal `npm run build`
-- In your chrome extensions menu enable developer mode.
+- Go to (chrome://extensions/)[chrome://extensions/]
+- enable developer mode
 - click on "Load unpacked"
 - navigate to the folder where you downloaded this repo.
