@@ -28,3 +28,7 @@ Currently doesn't work in some parts of gmail. Doesn't work If you click on your
 - enable developer mode
 - click on "Load unpacked"
 - navigate to the folder where you downloaded this repo.
+
+## Todo
+
+I want to update this extension to allow the user to filter out a selected email.
