@@ -5,7 +5,8 @@ Useful for when you're broadcasting and don't want your personal email leaked.
 
 # Notes
 
-Mostly works so far, currently doesn't hide email addresses in gmail when a user clicks on their icon in the top right.
+Mostly works so far, currently hides ALL email addresses in the DOM.
+Currently doesn't work in some parts of gmail. Doesn't work If you click on your user icon to change emails.
 
 ## To Use
 
