@@ -13,15 +13,22 @@ function hideEmailAddresses(): void {
 				node.textContent &&
 				emailRegex.test(node.textContent)
 			) {
-				const newElement = document.createElement('span');
-				newElement.textContent = node.textContent.replace(
+				const newText = node.textContent.replace(
 					emailRegex,
 					'[email protected]'
 				);
-				element.replaceChild(newElement, node);
+				node.textContent = newText;
 			}
 		});
 	});
 }
 
 hideEmailAddresses();
+
+const observer = new MutationObserver(hideEmailAddresses);
+
+observer.observe(document.body, {
+	childList: true,
+	subtree: true,
+	characterData: true,
+});

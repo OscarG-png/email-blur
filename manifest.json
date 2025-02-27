@@ -12,11 +12,6 @@
       "matches": ["<all_urls>"],
       "js": ["dist/content.js"],
       "run_at": "document_end"
-    },
-    {
-      "matches": ["*://mail.google.com/*", "*://accounts.google.com/*"],
-      "js": ["dist/content.js"],
-      "run_at": "document_start"
     }
   ],
   "action": {
