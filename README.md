@@ -9,7 +9,9 @@ Mostly works so far, currently doesn't hide email addresses in gmail when a user
 
 ## To Use
 
-clone this repo
-In your chrome extensions menu enable developer mode.
-click on "Load unpacked"
-navigate to the folder where you downloaded this repo.
+- clone this repo
+- cd into directory
+- run the following in your terminal `npm run build`
+- In your chrome extensions menu enable developer mode.
+- click on "Load unpacked"
+- navigate to the folder where you downloaded this repo.
