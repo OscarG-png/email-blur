@@ -1,5 +1,7 @@
 function hideEmailAddresses(): void {
-	const emailRegex = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b/g;
+	// Hardcoded email to hide
+	const emailToHide = '';
+
 	const elements = document.querySelectorAll('*');
 
 	elements.forEach((element) => {
@@ -8,24 +10,35 @@ function hideEmailAddresses(): void {
 		}
 
 		element.childNodes.forEach((node) => {
-			if (
-				node.nodeType === Node.TEXT_NODE &&
-				node.textContent &&
-				emailRegex.test(node.textContent)
-			) {
-				const newText = node.textContent.replace(
-					emailRegex,
-					'[email protected]'
-				);
-				node.textContent = newText;
+			if (node.nodeType === Node.TEXT_NODE && node.textContent) {
+				// Check if this node contains the specific email
+				if (node.textContent.includes(emailToHide)) {
+					console.log('Found email to hide in:', node.textContent);
+
+					const specificEmailRegex = new RegExp(
+						`\\b${emailToHide.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`,
+						'g'
+					);
+
+					const newText = node.textContent.replace(
+						specificEmailRegex,
+						'[email protected]'
+					);
+
+					node.textContent = newText;
+				}
 			}
 		});
 	});
 }
 
+// Run immediately
 hideEmailAddresses();
 
-const observer = new MutationObserver(hideEmailAddresses);
+// Set up observer for DOM changes
+const observer = new MutationObserver(() => {
+	hideEmailAddresses();
+});
 
 observer.observe(document.body, {
 	childList: true,
